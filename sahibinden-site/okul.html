@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahibinden Benzeri Sayfa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: #000;
+            color: #ffcc00;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-text {
+            color: #ffcc00;
+            font-size: 1.5em;
+        }
+
+        .spacer {
+            margin-right: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            position: relative;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #ffcc00;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+
+        nav ul li:hover > ul {
+            display: block;
+        }
+
+        nav ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #000;
+            padding: 10px 0;
+            margin: 0;
+            list-style: none;
+            z-index: 1000;
+        }
+
+        nav ul ul li {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul ul li a {
+            padding: 10px 20px;
+            white-space: nowrap;
+        }
+
+        .main-content {
+            padding: 20px 0;
+        }
+
+        footer {
+            background-color: #000;
+            color: #ffcc00;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .ilan-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .ilan {
+            border: 1px solid #ccc;
+            padding: 10px;
+            flex: 1 1 calc(33.333% - 20px);
+            box-sizing: border-box;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: calc(33.333% - 20px);
+            height: 400px;
+        }
+
+        .ilan img {
+            width: 100%;
+            height: auto;
+            max-height: 150px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .ilan h3 {
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+
+        .ilan p {
+            margin: 5px 0;
+            text-align: center;
+        }
+
+        .ilan-footer {
+            margin-top: auto;
+        }
+
+        .new-listing-form {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .new-listing-form h2 {
+            margin-top: 0;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .form-group input[type="file"] {
+            padding: 3px;
+        }
+
+        .form-group button {
+            background-color: #ffcc00;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: #e6b800;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>
+                <span class="logo-text">Sahibinden.com</span>
+                <span class="spacer"></span>
+                Satılık Ürünler
+            </h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Anasayfa</a>
+                        <ul>
+                            <li><a href="#">Alt Menü 1</a></li>
+                            <li><a href="#">Alt Menü 2</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Araçlar</a>
+                        <ul>
+                            <li><a href="#">Alt Menü 1</a></li>
+                            <li><a href="#">Alt Menü 2</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Emlak</a>
+                        <ul>
+                            <li><a href="#">Alt Menü 1</a></li>
+                            <li><a href="#">Alt Menü 2</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">İş İlanları</a>
+                        <ul>
+                            <li><a href="#">Alt Menü 1</a></li>
+                            <li><a href="#">Alt Menü 2</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Hizmetler</a>
+                        <ul>
+                            <li><a href="#">Alt Menü 1</a></li>
+                            <li><a href="#">Alt Menü 2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="main-content">
+        <div class="container">
+            <h2>En Yeni İlanlar</h2>
+            <div class="ilan-container">
+                <div class="ilan">
+                    <img src="indir (1).jpg" alt="Araba İlanı">
+                    <h3>Araba İlanı</h3>
+                    <p>Marka: Mercedes</p>
+                    <p>Model: E200</p>
+                    <p>Fiyat: 150.000 TL</p>
+                </div>
+                <div class="ilan">
+                    <img src="indir (1).jpg" alt="Ev İlanı">
+                    <h3>Ev İlanı</h3>
+                    <p>İl: İstanbul</p>
+                    <p>İlçe: Kadıköy</p>
+                    <p>Fiyat: 500.000 TL</p>
+                </div>
+                <div class="ilan">
+                    <img src="indir (1).jpg" alt="Telefon İlanı">
+                    <h3>Telefon İlanı</h3>
+                    <p>Marka: iPhone</p>
+                    <p>Model: 12 Pro</p>
+                    <p>Fiyat: 8.000 TL</p>
+                </div>
+                <div class="ilan">
+                    <img src="indir (1).jpg" alt="Laptop İlanı">
+                    <h3>Laptop İlanı</h3>
+                    <p>Marka: Dell</p>
+                    <p>Model: XPS 15</p>
+                    <p>Fiyat: 10.000 TL</p>
+                </div>
+                <div class="ilan">
+                    <img src="indir (1).jpg" alt="Ev Eşyası İlanı">
+                    <h3>Ev Eşyası İlanı</h3>
+                    <p>Ürün: Çamaşır Makinesi</p>
+                    <p>Durum: Sıfır</p>
+                    <p>Fiyat: 2.500 TL</p>
+                </div>
+                <div class="ilan">
+                    <img src="indir (1).jpg" alt="İş Makinesi İlanı">
+                    <h3>İş Makinesi İlanı</h3>
+                    <p>Marka: Caterpillar</p>
+                    <p>Tür: Kepçe</p>
+                    <p>Fiyat: 250.000 TL</p>
+                </div>
+                <div class="ilan">
+                    <img src="indir (1).jpg" alt="Arsa İlanı">
+                    <h3>Arsa İlanı</h3>
+                    <p>İl: Ankara</p>
+                    <p>İlçe: Çankaya</p>
+                    <p>Fiyat: 1.000.000 TL</p>
+                </div>
+                <div class="ilan">
+                    <img src="indir (1).jpg" alt="Kiralık Ev İlanı">
+                    <h3>Kiralık Ev İlanı</h3>
+                    <p>İl: İzmir</p>
+                    <p>İlçe: Bornova</p>
+                    <p>Fiyat: 2.000 TL/ay</p>
+                </div>
+            </div>
+            <div class="new-listing-form">
+                <h2>Yeni İlan Ekle</h2>
+                <form action="#" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="title">İlan Başlığı:</label>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Kategori:</label>
+                        <select id="category" name="category" required>
+                            <option value="Araba">Araba</option>
+                            <option value="Ev">Ev</option>
+                            <option value="Telefon">Telefon</option>
+                            <option value="Laptop">Laptop</option>
+                            <option value="Ev Eşyası">Ev Eşyası</option>
+                            <option value="İş Makinesi">İş Makinesi</option>
+                            <option value="Arsa">Arsa</option>
+                            <option value="Kiralık Ev">Kiralık Ev</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="photo">Fotoğraf:</label>
+                        <input type="file" id="photo" name="photo" accept="image/*" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="details">Detaylar:</label>
+                        <textarea id="details" name="details" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Fiyat:</label>
+                        <input type="number" id="price" name="price" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">İlanı Ekle</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Sahibinden Benzeri Sayfa</p>
+        </div>
+    </footer>
+</body>
+</html>
